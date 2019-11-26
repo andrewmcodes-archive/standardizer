@@ -42,6 +42,7 @@ set -o xtrace
 git fetch origin $HEAD_BRANCH
 git checkout -b $HEAD_BRANCH origin/$HEAD_BRANCH
 
+gem install bundler:2.0.2
 bundle install --path vendor/bundle --jobs 4 --retry 3
 yarn install --frozen-lockfile
 bin/standardize
